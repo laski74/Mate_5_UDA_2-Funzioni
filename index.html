@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le funzioni · Matematica 5</title><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23086653%22/%3E%3Cpath%20d%3D%22M4%2021h24M13%205v23%22%20stroke%3D%22%23bcf1dc%22%20stroke-width%3D%221.5%22/%3E%3Cpath%20d%3D%22M4%2026C13%2027%2013%208%2028%207%22%20fill%3D%22none%22%20stroke%3D%22%23fff4ce%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E">
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+<style>
+:root{color-scheme:light;--paper:#f3f5ef;--card:#fff;--text:#182c2d;--muted:#465b57;--line:#c8d5ce;--soft:#e6f1eb;--accent:#086653;--alt:#a34c22;--axis:#5a6b68;--dark:#102723}
+*{box-sizing:border-box}body{margin:0;color:var(--text);background:var(--paper);font:17px/1.58 'Atkinson Hyperlegible Next',Arial,sans-serif}body.dark{color-scheme:dark;--paper:#132322;--card:#1c302e;--text:#f0f7f3;--muted:#c1d7cd;--line:#4c6560;--soft:#253e37;--accent:#85e9c5;--alt:#ffbf96;--axis:#adc5bd;--dark:#101d1b}
+a{color:var(--accent);text-underline-offset:.2em}button,select,input{font:inherit;accent-color:var(--accent)}button,select{color:var(--text);background:var(--card);padding:.42em .75em;border:1px solid var(--line);border-radius:.45em}button{cursor:pointer}button[aria-pressed=true]{color:var(--card);background:var(--accent)}:focus-visible{outline:3px solid var(--alt);outline-offset:4px}header,nav,main,footer,.controls{padding-inline:max(1.1rem,calc((100% - 1130px)/2))}.hero{background:var(--dark);color:#edf8f1;padding-block:2.4rem}.hero p{color:#c6e5da;margin:.35rem 0}.hero h1{font:clamp(2.25rem,7vw,4.4rem)/1.03 Georgia,serif;letter-spacing:-.04em;margin:.45em 0 .2em}.hero .sub{max-width:50ch;font-size:1.15em}.controls,.navlinks{display:flex;align-items:center;gap:.5rem 1rem;flex-wrap:wrap;padding-block:.65rem;background:var(--card);border-bottom:1px solid var(--line)}.navlinks a{padding:.15em .2em}.controls label{display:flex;align-items:center;gap:.5rem}.active{font-weight:bold}.skip{position:absolute;left:.7rem;top:-7rem;padding:.4rem;background:var(--card);z-index:4}.skip:focus{top:.7rem}
+main{padding-block:1.5rem 3rem}h2,h3{font-family:Georgia,serif;line-height:1.2}h2{font-size:clamp(1.75rem,4vw,2.6rem);margin:.5rem 0}h3{font-size:1.4rem;margin:.3rem 0 .65rem}h4{margin:0 0 .45rem;font-size:1.02rem}p{margin:.5rem 0 .95rem}.eyebrow{font-size:.9rem;letter-spacing:.07em;font-weight:bold}.muted,.section-meta{color:var(--muted)}section{scroll-margin-top:1rem}.panel,.week{margin:1.5rem 0 2rem}.cards,.cols,.map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.card,.block,.lab,.figure,.prompt{background:var(--card);border:1px solid var(--line);border-radius:.65rem;padding:1rem 1.15rem;margin:.8rem 0}.card{margin:0;display:flex;flex-direction:column}.card>a:last-child{margin-top:auto;padding-top:.3rem}.card .cols{gap:.4rem .75rem}.card p,.card ul{margin:.3rem 0 .7rem}.card h4{color:var(--accent)}.week>h3{border-bottom:1px solid var(--line);padding-bottom:.4em}.map>div,.chain>span:not([aria-hidden]){background:var(--soft);border-radius:.45rem;padding:.7rem}.map b{display:block}.chain{display:flex;flex-wrap:wrap;gap:.65rem;align-items:center;margin:1rem 0}.prompt{border-left:.3rem solid var(--accent)}.tag{color:var(--accent);font-weight:bold}.lab-controls{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem}.lab-controls label{display:flex;align-items:center;flex-wrap:wrap;gap:.4rem}.lab-controls input[type=range]{max-width:100%}.graph{width:100%;height:auto;max-height:400px;margin:.6rem 0;display:block;background:var(--paper);border:1px solid var(--line);border-radius:.4rem}.graph .grid{stroke:var(--line);stroke-width:.7}.graph .axis{stroke:var(--axis);stroke-width:1.5}.graph text{fill:var(--muted);font:13px Arial,sans-serif}.graph path.curve{fill:none;stroke:var(--accent);stroke-width:3}.graph path.second{stroke:var(--alt);stroke-dasharray:7 4}.graph .marker{stroke:var(--alt);stroke-width:1.8;stroke-dasharray:5 4}.graph .dot{fill:var(--accent);stroke:var(--card);stroke-width:1.7}.graph .open{fill:var(--paper);stroke:var(--accent);stroke-width:2.5}.graph .end{fill:var(--accent)}.output{padding:.65rem;background:var(--soft);border-radius:.4rem;min-height:2.9rem;display:block}.figure{max-width:750px;overflow-x:auto}.figure table,.score{width:100%;border-collapse:collapse}.score th,.score td,.figure th,.figure td{border:1px solid var(--line);padding:.4rem;text-align:left}details{margin:.65rem 0;border:1px solid var(--line);border-radius:.4rem;padding:.45rem .7rem}summary{cursor:pointer;font-weight:bold;color:var(--accent)}.write{margin:.75rem 0;display:grid;gap:.3rem;font-weight:bold}.write textarea{width:100%;min-height:4em;resize:vertical;font:inherit;color:var(--text);background:var(--paper);border:1px solid var(--line);border-radius:.35rem;padding:.4rem}.write-line{display:none}.book-list{padding-left:1.1rem;margin:.4rem 0}.book-list li{margin:.26rem 0}.foot{padding-block:1rem 2rem;color:var(--muted);border-top:1px solid var(--line)}.dsa-mode{font-family:Arial,sans-serif;font-size:19px;line-height:1.72;letter-spacing:.025em}.dsa-mode h1,.dsa-mode h2,.dsa-mode h3{font-family:Arial,sans-serif;letter-spacing:normal}.dsa-mode .cards,.dsa-mode .map,.dsa-mode .cols{grid-template-columns:1fr}.dsa-note{display:none}.dsa-mode .dsa-note{display:block}
+.history-map{grid-template-columns:repeat(3,minmax(0,1fr))}.theory h4{margin:1rem 0 .35rem;color:var(--accent)}.book-crop{position:relative;overflow:hidden;width:100%;margin:.5rem 0;background:#fff;break-inside:avoid}.book-crop img{position:absolute;height:auto;max-width:none}.theory .score{margin:.7rem 0}.formula-table{overflow-x:auto}[hidden]{display:none!important}@media(max-width:700px){.cards,.cols,.map{grid-template-columns:1fr}.hero{padding-block:1.4rem}.score{font-size:.9em}.navlinks{gap:.4em .65em}}
+@media print{body,body.dark{--text:#111;--muted:#333;--accent:#254637;--card:#fff;--paper:#fff;--soft:#fff;--line:#aaa;color-scheme:light;font-size:11pt;background:#fff}.hero{background:#fff;color:#111;padding-block:0}.hero p{color:#333}.hero h1{font-size:23pt}.controls,.navlinks,.skip,.lab,.hint,.answer,.solution,.screen-only,.foot,.write textarea,.print-hide{display:none!important}.teacher .solution{display:block!important}.teacher details.solution summary{display:none}.write-line{display:block;min-height:2.5rem;border-bottom:1px solid #888}.cards,.map,.cols{display:block}main{padding-top:0}.card,.block,.prompt,.map>div{break-inside:avoid;margin:.45rem 0;padding:.5rem}.panel{margin:1rem 0}a{color:inherit;text-decoration:none}.hero,.controls,.navlinks,main,.foot{padding-inline:0}.panel.history-map{grid-template-columns:repeat(3,minmax(0,1fr))}.theory h4{margin:1rem 0 .35rem;color:var(--accent)}.book-crop{position:relative;overflow:hidden;width:100%;margin:.5rem 0;background:#fff;break-inside:avoid}.book-crop img{position:absolute;height:auto;max-width:none}.theory .score{margin:.7rem 0}.formula-table{overflow-x:auto}[hidden]{display:none!important}}
+</style></head>
+<body><a class="skip" href="#contenuto">Vai al contenuto</a>
+<header class="hero"><p class="eyebrow">LICEO MONTI DI CHIERI · 2026–27 · MATEMATICA</p>
+<p id="class-name">5CLL · Liceo linguistico</p><h1>Le funzioni</h1><p class="sub">Dal grafico alla formula, dalla formula al grafico. UDA 2 · 3 settimane · 6 lezioni.</p></header>
+<div class="controls"><label for="class-select">Classe <select id="class-select"><option>5CLL</option><option>5DSU</option></select></label><button id="dsa" type="button" aria-pressed="false">DSA/BES</button><button type="button" id="dark" aria-pressed="false">Tema DARK</button>
+<button type="button" id="print">Stampa questa pagina</button></div>
+<nav aria-label="Lezioni" class="navlinks"><a href="#rotta">La rotta</a><a href="#lezione-1">Lezione 1</a><a href="#lezione-2">Lezione 2</a><a href="#lezione-3">Lezione 3</a><a href="#lezione-4">Lezione 4</a><a href="#lezione-5">Lezione 5</a><a href="#lezione-6">Lezione 6</a><a href="#mappe">Mappe</a><a href="#prova">Autoverifica</a></nav><main id="contenuto" tabindex="-1"><section id="rotta" class="panel"><div class="block"><h2>Perché è nata l’analisi?</h2>
+<p>Quanto lontano arriva un proiettile se cambio l’angolo di lancio? Come trovo la velocità di un corpo in un istante preciso? Come misuro un’area dal contorno curvo? Fra Cinquecento e Seicento, problemi di moto, ottica e misura spinsero i matematici a cercare metodi che valessero per intere famiglie di problemi. I risultati di Newton e Leibniz diedero forma al calcolo infinitesimale. La formulazione rigorosa del limite venne sviluppata in seguito.</p>
+<div class="map history-map">
+<div><h4>Ottimizzare</h4><p>Se la velocità iniziale è fissata, a quale inclinazione corrisponde la gittata più lunga? In un modello senza attrito e con partenza e arrivo alla stessa altezza, l’angolo ottimale è 45°. In ottica Fermat usò il tempo di percorrenza per spiegare la rifrazione. Cercare il massimo o il minimo significa confrontare i risultati per tutti gli ingressi ammessi.</p></div>
+<div><h4>Misurare una variazione istantanea</h4><p>La velocità media dipende da un intervallo di tempo. Riducendo quell’intervallo, la pendenza delle secanti può avvicinarsi a quella della tangente. Limite e derivata permettono di dare senso a questo passaggio.</p></div>
+<div><h4>Misurare e accumulare</h4><p>Archimede racchiudeva le misure cercate tra approssimazioni. Keplero immaginava di suddividere il cerchio in triangoli molto sottili. La stessa idea di approssimare e sommare prepara al calcolo dell’area sotto un grafico con l’integrale.</p></div></div>
+<p>In questa UDA impariamo a descrivere la funzione prima di studiarne il comportamento più in dettaglio. Quali ingressi accetta? Quali valori raggiunge? Dove cresce, cambia segno o può essere invertita? Sono le domande da cui partirà lo studio di funzione.</p>
+<details class="hint"><summary>Perché la velocità media può raccontare poco?</summary>
+<p>Per \(s(t)=t^2\), in metri con \(t\) espresso in secondi, tra \(t=1\) e \(t=1+h\) la velocità media vale \(\frac{(1+h)^2-1}{h}=2+h\) m/s, per \(h>0\). Con \(h=1\), \(0{,}1\) e \(0{,}01\) trovi 3, 2,1 e 2,01 m/s. Avvicinando \(h\) a zero il rapporto si avvicina a 2 m/s. Prova a spiegare che cosa accade alla secante quando i due punti si avvicinano.</p></details>
+<p class="section-meta">Nel manuale · <a href="immagini/pagina_02.png" target="_blank" rel="noopener">p. 2</a>, <a href="immagini/pagina_03.png" target="_blank" rel="noopener">p. 3</a>, <a href="immagini/pagina_04.png" target="_blank" rel="noopener">p. 4</a>, <a href="immagini/pagina_05.png" target="_blank" rel="noopener">p. 5</a>.</p></div><h2>La rotta</h2><p>Tre settimane, due lezioni alla settimana. Porta il libro e il quaderno. Per ogni esercizio trovi la pagina stampata e il numero.</p><p class="muted">Per partire servono intervalli, scomposizioni, disequazioni elementari e i grafici già visti di parabola, esponenziale e logaritmo.</p><section class="week"><h3>Settimana 1 · Funzione e dominio</h3><div class="cards"><article class="card"><p class="tag">Lezione 1 · pp. 6 e 9–12</p>
+<h3>Che cosa può entrare?</h3><p>Funzioni, intervalli e dominio algebrico</p><p>Passare dal grafico alla formula e motivare gli estremi inclusi ed esclusi.</p>
+<div class="cols"><div><h4>In classe · 60 min</h4><ul class="book-list"><li><a href="immagini/pagina_35.png" target="_blank" rel="noopener">p. 35, n. 51 (primo e secondo grafico)</a></li><li><a href="immagini/pagina_37.png" target="_blank" rel="noopener">p. 37, n. 81</a></li><li><a href="immagini/pagina_37.png" target="_blank" rel="noopener">p. 37, n. 90</a></li></ul></div>
+<div><h4>A casa · 40 min</h4><ul class="book-list"><li><a href="immagini/pagina_37.png" target="_blank" rel="noopener">p. 37, n. 72</a></li><li><a href="immagini/pagina_37.png" target="_blank" rel="noopener">p. 37, n. 82</a></li></ul><p><b>Sfida</b> · <a href="immagini/pagina_38.png" target="_blank" rel="noopener">p. 38, n. 100</a></p><p>12′ teoria e mappa · 15′ esercizi base · 13′ sfida</p></div></div>
+<a href="#lezione-1">Apri la lezione 1</a></article><article class="card"><p class="tag">Lezione 2 · pp. 10–13 e grafici elementari</p>
+<h3>Dove la formula smette di funzionare?</h3><p>Dominio trascendente, valore assoluto e uguaglianza</p><p>Combinare le condizioni e accorgersi di un punto escluso anche dopo una semplificazione.</p>
+<div class="cols"><div><h4>In classe · 60 min</h4><ul class="book-list"><li><a href="immagini/pagina_38.png" target="_blank" rel="noopener">p. 38, n. 122 (a, coprendo lo svolgimento)</a></li><li><a href="immagini/pagina_39.png" target="_blank" rel="noopener">p. 39, n. 126</a></li><li><a href="immagini/pagina_43.png" target="_blank" rel="noopener">p. 43, n. 261</a></li></ul></div>
+<div><h4>A casa · 40 min</h4><ul class="book-list"><li><a href="immagini/pagina_39.png" target="_blank" rel="noopener">p. 39, n. 136</a></li><li><a href="immagini/pagina_67.png" target="_blank" rel="noopener">p. 67, n. 622</a></li></ul><p><b>Sfida</b> · <a href="immagini/pagina_39.png" target="_blank" rel="noopener">p. 39, n. 147</a></p><p>12′ teoria · 15′ esercizi base · 13′ sfida</p></div></div>
+<a href="#lezione-2">Apri la lezione 2</a></article></div></section><section class="week"><h3>Settimana 2 · Segno e proprietà</h3><div class="cards"><article class="card"><p class="tag">Lezione 3 · pp. 13–14</p>
+<h3>Dove vive il grafico?</h3><p>Zeri, intersezioni e segno</p><p>Deduci dove si trova la curva e distingui uno zero, un punto escluso e un contatto senza cambio di segno.</p>
+<div class="cols"><div><h4>In classe · 60 min</h4><ul class="book-list"><li><a href="immagini/pagina_43.png" target="_blank" rel="noopener">p. 43, n. 267 (a–b)</a></li><li><a href="immagini/pagina_44.png" target="_blank" rel="noopener">p. 44, n. 278</a></li></ul></div>
+<div><h4>A casa · 40 min</h4><ul class="book-list"><li><a href="immagini/pagina_44.png" target="_blank" rel="noopener">p. 44, n. 276</a></li></ul><p><b>Sfida</b> · <a href="immagini/pagina_44.png" target="_blank" rel="noopener">p. 44, n. 283</a></p><p>10′ teoria e tabella dei segni · 15′ esercizio base · 15′ sfida</p></div></div>
+<a href="#lezione-3">Apri la lezione 3</a></article><article class="card"><p class="tag">Lezione 4 · pp. 14–18</p>
+<h3>Che cosa racconta la curva?</h3><p>Immagine, monotonia, parità e periodicità</p><p>Leggere proprietà dal grafico e giustificare pari o dispari dal dominio e dalla formula.</p>
+<div class="cols"><div><h4>In classe · 60 min</h4><ul class="book-list"><li><a href="immagini/pagina_48.png" target="_blank" rel="noopener">p. 48, n. 325 (primo e secondo grafico)</a></li><li><a href="immagini/pagina_50.png" target="_blank" rel="noopener">p. 50, n. 343 (a, b, c, f, g)</a></li><li><a href="immagini/pagina_51.png" target="_blank" rel="noopener">p. 51, n. 349 (tutti e tre i grafici)</a></li></ul></div>
+<div><h4>A casa · 40 min</h4><ul class="book-list"><li><a href="immagini/pagina_51.png" target="_blank" rel="noopener">p. 51, nn. 352, 354, 360</a></li><li><a href="immagini/pagina_52.png" target="_blank" rel="noopener">p. 52, n. 380</a></li></ul><p><b>Sfida</b> · <a href="immagini/pagina_50.png" target="_blank" rel="noopener">p. 50, n. 345</a></p><p>12′ teoria e mappa · 15′ esercizi base · 13′ sfida</p></div></div>
+<a href="#lezione-4">Apri la lezione 4</a></article></div></section><section class="week"><h3>Settimana 3 · Inversa, composta e autoverifica</h3><div class="cards"><article class="card"><p class="tag">Lezione 5 · pp. 19–21</p>
+<h3>Tornare indietro, mettere in catena</h3><p>Iniettività, inversa e funzione composta</p><p>Controllare il numero di controimmagini, invertire nei casi essenziali e rispettare l’ordine di composizione.</p>
+<div class="cols"><div><h4>In classe · 60 min</h4><ul class="book-list"><li><a href="immagini/pagina_52.png" target="_blank" rel="noopener">p. 52, n. 407 (primo e terzo grafico)</a></li><li><a href="immagini/pagina_53.png" target="_blank" rel="noopener">p. 53, n. 409</a></li><li><a href="immagini/pagina_54.png" target="_blank" rel="noopener">p. 54, n. 432</a></li></ul></div>
+<div><h4>A casa · 40 min</h4><ul class="book-list"><li><a href="immagini/pagina_53.png" target="_blank" rel="noopener">p. 53, n. 419</a></li></ul><p><b>Sfida</b> · <a href="immagini/pagina_55.png" target="_blank" rel="noopener">p. 55, n. 443</a></p><p>12′ teoria · 15′ esercizio base · 13′ sfida</p></div></div>
+<a href="#lezione-5">Apri la lezione 5</a></article><article class="card"><p class="tag">Lezione 6 · p. 22 (idea di indice), pp. 27–28 (somma e racconto)</p>
+<h3>Il problema di Gauss e la prova</h3><p>Somma a coppie, allenamento e autoverifica</p><p>Riconoscere una somma a passo costante e affrontare in autonomia la prova sulle funzioni.</p>
+<div class="cols"><div><h4>In classe · 60 min</h4><ul class="book-list"><li><a href="immagini/pagina_64.png" target="_blank" rel="noopener">p. 64, n. 582</a></li><li><a href="immagini/pagina_66.png" target="_blank" rel="noopener">p. 66, nn. 596, 603</a></li><li><a href="immagini/pagina_74.png" target="_blank" rel="noopener">p. 74, nn. 1–11 (prima parte)</a></li></ul></div>
+<div><h4>A casa · 40 min</h4><ul class="book-list"><li><a href="immagini/pagina_74.png" target="_blank" rel="noopener">p. 74, nn. 1–11 (completamento)</a></li></ul><p><b>Sfida</b> · <a href="immagini/pagina_64.png" target="_blank" rel="noopener">p. 64, n. 583</a></p><p>3′ lettura del metodo di Gauss · 7′ sfida già avviata in classe · 30′ completamento della prova</p></div></div>
+<a href="#lezione-6">Apri la lezione 6</a></article></div></section><div class="block"><h3>Il traguardo</h3><p>Leggere e giustificare le proprietà di una funzione da formula e grafico. Alla fine svolgerai tutti gli esercizi della <a href="immagini/pagina_74.png" target="_blank" rel="noopener">p. 74</a>, dal n. 1 al n. 11.</p></div></section><section id="lezione-1" class="panel"><p class="tag">Settimana 1 · Lezione 1</p>
+<h2>Che cosa può entrare?</h2><p class="section-meta">Funzioni, intervalli e dominio algebrico · Libro pp. 6 e 9–12</p>
+<p><strong>Passare dal grafico alla formula e motivare gli estremi inclusi ed esclusi.</strong></p><p>5′ lancio · 15′ laboratorio · 10′ formalizzazione · 25′ esercizi · 5′ uscita</p>
+<div class="prompt"><h3>Prima di calcolare</h3><p>Due punti sulla stessa verticale possono appartenere al grafico della stessa funzione? E due punti alla stessa altezza?</p></div>
+<div class="block"><h3>Laboratorio</h3><p>Sposta la verticale. Prima di muoverla, prevedi per quali ascisse incontrerà le curve. Confronta il punto aperto del secondo grafico con il punto pieno. Traduci le osservazioni in intervalli.</p><div class="lab"><div class="lab-controls"><label for="domain-type">Grafico <select id="domain-type"><option value="circle">Semicerchio</option><option value="pieces">Due segmenti</option></select></label><label for="domain-x">Ascissa x <input id="domain-x" type="range" min="-5" max="5" step="0.25" value="-2"></label></div><svg class="graph" id="graph-domain" viewBox="0 0 540 274" role="img" aria-label="Grafico con una verticale mobile per riconoscere il dominio"></svg><output class="output" id="out-domain" aria-live="polite"></output></div>
+<label class="write">Scrivi una previsione e motiva con ciò che osservi.<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label></div>
+<div class="block theory"><h3>Formalizziamo</h3>
+<p class="section-meta">Sintesi dal manuale · <a href="immagini/pagina_06.png" target="_blank" rel="noopener">p. 6</a>, <a href="immagini/pagina_07.png" target="_blank" rel="noopener">p. 7</a>, <a href="immagini/pagina_08.png" target="_blank" rel="noopener">p. 8</a>, <a href="immagini/pagina_09.png" target="_blank" rel="noopener">p. 9</a>, <a href="immagini/pagina_10.png" target="_blank" rel="noopener">p. 10</a>, <a href="immagini/pagina_11.png" target="_blank" rel="noopener">p. 11</a>, <a href="immagini/pagina_12.png" target="_blank" rel="noopener">p. 12</a></p>
+
+<h4>Insiemi e intervalli</h4>
+<p>I numeri reali comprendono i razionali e gli irrazionali. Sulla retta reale \([a,b]\) include entrambi gli estremi e \((a,b)\) li esclude. Le scritture \([a,b)\) e \((a,b]\) ne includono uno solo. Accanto a \(+\infty\) e \(-\infty\) si usa sempre la parentesi tonda. \(\cap\) significa «valori in comune», \(\cup\) «valori che stanno in almeno uno dei due insiemi».</p>
+<h4>Che cos’è una funzione?</h4>
+<p>Con \(f\colon A\to B\) intendiamo una legge che a ciascun \(x\) di \(A\) associa uno e un solo \(f(x)\) in \(B\). \(A\) è il <b>dominio</b>, \(B\) il <b>codominio</b>. L’<b>immagine</b> è l’insieme delle uscite effettive e può essere più piccolo del codominio. Si parla di funzione reale di variabile reale quando \(A\) e \(B\) sono sottoinsiemi di \(\mathbb R\). Il grafico è formato dalle coppie \((x,f(x))\), con \(x\in A\).</p>
+<h4>Classificazione ed esempi</h4>
+<div class="formula-table"><table class="score"><thead><tr><th scope="col">Famiglia</th><th scope="col">Esempio</th><th scope="col">Dominio naturale</th></tr></thead><tbody>
+<tr><td>Razionale intera (polinomiale)</td><td>\(x^2-3x+2\)</td><td>\(\mathbb R\)</td></tr>
+<tr><td>Razionale fratta</td><td>\(\frac{x-2}{x+1}\)</td><td>\(\mathbb R\setminus\{-1\}\)</td></tr>
+<tr><td>Algebrica irrazionale</td><td>\(\sqrt{x-2}\)</td><td>\([2,+\infty)\)</td></tr>
+<tr><td>Trascendente (qui logaritmica)</td><td>\(\ln(x-2)\)</td><td>\((2,+\infty)\)</td></tr>
+</tbody></table></div>
+<p>Il <b>dominio naturale</b> raccoglie gli ingressi per cui la formula ha significato nei reali. Un problema può imporre ulteriori vincoli, come un tempo non negativo. Con più operazioni si intersecano le condizioni; se una singola condizione produce più intervalli, si usa l’unione di quegli intervalli.</p>
+<h4>Schema operativo</h4><p>Una funzione associa a ogni elemento del dominio un solo valore nel codominio. Il grafico supera il test della verticale se ciascuna verticale lo incontra in al più un punto. La proiezione del grafico sull’asse <i>x</i> dà il dominio.</p>
+<p>Una funzione algebrica può essere razionale (intera o fratta) o irrazionale. Esponenziale, logaritmo e seno sono esempi di funzioni trascendenti. Per trovare il dominio naturale imponi insieme tutte le condizioni.</p>
+<div class="map"><div><b>Denominatore</b> ≠ 0</div><div><b>Radice pari</b> radicando ≥ 0</div><div><b>Radice pari al denominatore</b> radicando &gt; 0</div><div><b>Radice dispari</b> nessun vincolo di segno sul radicando</div><div><b>Logaritmo</b> argomento &gt; 0</div><div><b>Logaritmo al denominatore</b> argomento &gt; 0 e diverso da 1, così il logaritmo è definito e non si annulla</div></div><p class="dsa-note hint">Prima guarda l’asse x. Poi scrivi due vincoli brevi. Infine traducili in intervalli. Il simbolo ≥ si legge «maggiore o uguale».</p>
+<h4>Esempio svolto</h4><p>Trova il dominio di \(\sqrt{x+2}/(x-1)\).</p><details class="hint"><summary>Mostra i passaggi</summary><ol><li>La radice richiede \(x+2\ge0\), quindi \(x\ge-2\).</li><li>La divisione richiede \(x-1\ne0\), quindi \(x\ne1\).</li><li>Interseca le condizioni. Ottieni \([-2,1)\cup(1,+\infty)\). In \(-2\) la frazione vale zero, mentre in 1 non è definita.</li></ol></details><details class="hint"><summary>Un altro esempio</summary><p>Per \(1/\sqrt{4-x}+\sqrt[3]{x+1}\) occorre \(4-x>0\), dunque \(D=(-\infty,4)\). La radice cubica accetta anche radicandi negativi.</p></details></div>
+<div class="cols"><div class="block"><h3>In classe</h3><ul class="book-list"><li><a href="immagini/pagina_35.png" target="_blank" rel="noopener">p. 35, n. 51 (primo e secondo grafico)</a> · Trova il dominio dei primi due grafici. Le estremità tratteggiate della parabola indicano che prosegue.<div class="book-crop" style="aspect-ratio:384/179;max-width:384px"><img alt="Parabola e semicerchio con estremi pieni sull’asse x" src="immagini/pagina_35.png" style="width:199.47917%;left:-23.43750%;top:-183.24022%"></div></li><li><a href="immagini/pagina_37.png" target="_blank" rel="noopener">p. 37, n. 81</a> · Determina il dominio di √(4x+1)/x.</li><li><a href="immagini/pagina_37.png" target="_blank" rel="noopener">p. 37, n. 90</a> · Determina il dominio di 1/√(−x²+3x).</li></ul></div>
+<div class="block"><h3>A casa · 40 minuti</h3><p>12′ teoria e mappa · 15′ esercizi base · 13′ sfida</p><ul class="book-list"><li><a href="immagini/pagina_37.png" target="_blank" rel="noopener">p. 37, n. 72</a> · Trova il dominio di 1/(3x²−5x+2).</li><li><a href="immagini/pagina_37.png" target="_blank" rel="noopener">p. 37, n. 82</a> · Trova il dominio di √(x/2+1)+√(20−2x).</li></ul>
+<details><summary>Esercizi di recupero, a scelta</summary><ul class="book-list"><li><a href="immagini/pagina_38.png" target="_blank" rel="noopener">p. 38, n. 92</a> · Trova il dominio di √(5−x)+√(2x+4).</li></ul></details></div></div>
+<div class="block"><h3>Sfida per casa</h3><p><a href="immagini/pagina_38.png" target="_blank" rel="noopener">p. 38, n. 100</a> · Trova il dominio di √((x²−4)/(x+3)). Motiva separatamente il ruolo di −3, −2 e 2.</p>
+<details class="hint"><summary>Un indizio per la sfida</summary><p>Scomponi x²−4 e ordina sulla retta −3, −2, 2. Per la radice serve il segno dell’intera frazione.</p></details>
+<label class="write">Annota il passaggio da discutere in classe.<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label></div>
+<details class="hint"><summary>Un indizio per iniziare</summary><p>Nel n. 81 a p. 37 quali operazioni possono impedire il calcolo?</p><details><summary>Un passo in più</summary><p>Scrivi separatamente le condizioni su 4x+1 e su x, poi prendi i valori comuni.</p></details></details>
+<div class="block"><h3>Prima di chiudere</h3><label class="write">Qual è la differenza fra il dominio di √(3−x) e quello di 1/√(3−x)?<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label><p><a href="immagini/pagina_74.png" target="_blank" rel="noopener">p. 74</a> · Verso la prova, n. 1a–b e nn. 2–4.</p></div>
+<p class="screen-only"><a href="#rotta">Torna alla rotta</a> · <a href="#lezione-2">Lezione successiva</a></p>
+</section><section id="lezione-2" class="panel"><p class="tag">Settimana 1 · Lezione 2</p>
+<h2>Dove la formula smette di funzionare?</h2><p class="section-meta">Dominio trascendente, valore assoluto e uguaglianza · Libro pp. 10–13 e grafici elementari</p>
+<p><strong>Combinare le condizioni e accorgersi di un punto escluso anche dopo una semplificazione.</strong></p><p>5′ lancio · 15′ laboratorio · 10′ formalizzazione · 25′ esercizi · 5′ uscita</p>
+<div class="prompt"><h3>Prima di calcolare</h3><p>Se una frazione si semplifica fino a diventare una retta, il punto cancellato torna nel grafico?</p></div>
+<div class="block"><h3>Laboratorio</h3><p>Confronta la retta con la funzione semplificabile. Metti il cursore sul punto critico e prova anche un valore accanto. Confronta i confini dei domini di logaritmo e radice. Nel modello con il valore assoluto, prevedi quale tratto della curva tratteggiata si riflette.</p><div class="lab"><div class="lab-controls"><label for="hole-type">Funzione <select id="hole-type"><option value="hole">(x²−1)/(x−1)</option><option value="log">ln(x−1)</option><option value="sqrt">√(x−1)</option><option value="abs">x²−4 e |x²−4|</option></select></label><label for="hole-x">Ascissa x <input id="hole-x" type="range" min="-4" max="5" step="0.25" value="1"></label></div><svg class="graph" id="graph-holes" viewBox="0 0 540 274" role="img" aria-label="Grafico con valori esclusi ed estremi di dominio"></svg><output class="output" id="out-holes" aria-live="polite"></output></div>
+<label class="write">Scrivi una previsione e motiva con ciò che osservi.<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label></div>
+<div class="block theory"><h3>Formalizziamo</h3>
+<p class="section-meta">Sintesi dal manuale · <a href="immagini/pagina_12.png" target="_blank" rel="noopener">p. 12</a>, <a href="immagini/pagina_13.png" target="_blank" rel="noopener">p. 13</a>, <a href="immagini/pagina_15.png" target="_blank" rel="noopener">p. 15</a>, <a href="immagini/pagina_46.png" target="_blank" rel="noopener">p. 46</a></p>
+
+<h4>Leggi la formula dall’interno verso l’esterno</h4>
+<p>Per \(a^{u(x)}\) con base costante \(a>0\), controlla che l’esponente \(u(x)\) sia definito. Per \(\log_a u(x)\) servono \(a>0\), \(a\ne1\) e \(u(x)>0\). Se il logaritmo è anche un fattore del denominatore, imponi \(u(x)\ne1\). Ricorda che \(\ln=\log_e\).</p>
+<p>Come promemoria della tabella di p. 12, seno e coseno accettano ogni argomento reale definito. Per la tangente si escludono gli argomenti \(\pi/2+k\pi\), con \(k\in\mathbb Z\). Arcoseno e arcocoseno richiedono invece un argomento in \([-1,1]\).</p>
+<h4>Valore assoluto e trasformazioni</h4>
+<p>\(|u|\) vale \(u\) per \(u\ge0\) e \(-u\) per \(u<0\). In \(g(x)=|f(x)|\) gli ingressi rimangono quelli di \(f\). In \(g(x)=f(|x|)\) devi verificare che \(|x|\) sia nel dominio di \(f\). Per leggere una traslazione, in \(f(x-h)+k\) il punto \((x,f(x))\) si sposta in \((x+h,f(x)+k)\).</p>
+<h4>Quando due funzioni sono uguali?</h4>
+<p>Nel criterio del libro servono lo stesso dominio e uscite uguali per ogni ingresso comune. Per esempio \(\ln(x^2)=2\ln|x|\) vale per \(x\ne0\), mentre \(2\ln x\) è definito solo per \(x>0\). La condizione va controllata sulle formule di partenza.</p>
+<h4>Schema operativo</h4><div class="map"><div><b>Esponenziale</b> accetta ogni esponente reale definito</div><div><b>Logaritmo</b> argomento &gt; 0</div><div><b>Logaritmo al denominatore</b> argomento &gt; 0 e diverso da 1</div><div><b>Uguaglianza</b> stesso dominio e stessi valori in ogni punto</div></div>
+<p>Il valore assoluto restituisce la distanza da zero. Se al suo interno compare una funzione, il dominio resta quello della funzione interna. In \(y=|f(x)|\) le parti sotto l’asse <i>x</i> si riflettono sopra. In \(y=f(|x|)\) la parte con <i>x</i> ≥ 0 si riflette rispetto all’asse <i>y</i>, per gli ingressi ammessi.</p><p class="dsa-note hint">Scrivi ogni condizione su una riga. «Argomento del logaritmo» è tutto ciò che compare tra le sue parentesi.</p>
+<h4>Esempio svolto</h4><p>Determina il dominio di \(1/\ln(x^2-3)\).</p><details class="hint"><summary>Mostra i passaggi</summary><ol><li>L’argomento del logaritmo è positivo per \(x^2>3\), dunque \(x<-\sqrt3\) oppure \(x>\sqrt3\).</li><li>Il denominatore è nullo quando \(x^2-3=1\), cioè per \(x=\pm2\).</li><li>Dal dominio del logaritmo togli \(-2\) e 2. Sono punti interni ai due intervalli che hai appena trovato.</li></ol></details><details class="hint"><summary>Un altro esempio</summary><p>In \((x^2-1)/(x-1)\) escludi 1 prima di semplificare. Il grafico coincide con quello di \(x+1\) dove entrambe sono definite, con un punto vuoto in (1,2).</p></details></div>
+<div class="cols"><div class="block"><h3>In classe</h3><ul class="book-list"><li><a href="immagini/pagina_38.png" target="_blank" rel="noopener">p. 38, n. 122 (a, coprendo lo svolgimento)</a> · Determina il dominio di ln(5x−x²) prima di guardare lo svolgimento.</li><li><a href="immagini/pagina_39.png" target="_blank" rel="noopener">p. 39, n. 126</a> · Determina il dominio di 1/(4ˣ−16).</li><li><a href="immagini/pagina_43.png" target="_blank" rel="noopener">p. 43, n. 261</a> · Confronta f(x)=(x³+2x²−x−2)/(x²−1) e g(x)=x+2. Decidi se le due funzioni coincidono.</li></ul></div>
+<div class="block"><h3>A casa · 40 minuti</h3><p>12′ teoria · 15′ esercizi base · 13′ sfida</p><ul class="book-list"><li><a href="immagini/pagina_39.png" target="_blank" rel="noopener">p. 39, n. 136</a> · Trova il dominio di 1/(3 ln x−6).</li><li><a href="immagini/pagina_67.png" target="_blank" rel="noopener">p. 67, n. 622</a> · Trova il dominio di ln(3x−x²+4).</li></ul>
+<details><summary>Esercizi di recupero, a scelta</summary><ul class="book-list"><li><a href="immagini/pagina_46.png" target="_blank" rel="noopener">p. 46, n. 308</a> · Per ricavare la curva blu dalla rossa y=|x|, trasla il vertice da (0,0) a (−1,−4). Scrivi l’equazione di g.</li></ul></details></div></div>
+<div class="block"><h3>Sfida per casa</h3><p><a href="immagini/pagina_39.png" target="_blank" rel="noopener">p. 39, n. 147</a> · Trova il dominio di ln((x²−4x)/(3−x)) e spiega perché nessuno fra 0, 3 e 4 può appartenergli.</p>
+<details class="hint"><summary>Un indizio per la sfida</summary><p>Scomponi il numeratore in x(x−4), poi chiedi quando il quoziente è strettamente positivo.</p></details>
+<label class="write">Annota il passaggio da discutere in classe.<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label></div>
+<details class="hint"><summary>Un indizio per iniziare</summary><p>Nel n. 261 a p. 43 individua i valori per cui il denominatore si annulla.</p><details><summary>Un passo in più</summary><p>Fattorizza il numeratore raccogliendo x²−1 dopo aver scritto il dominio.</p></details></details>
+<div class="block"><h3>Prima di chiudere</h3><label class="write">Quali vincoli impone 1/log₂(x−1)?<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label><p><a href="immagini/pagina_74.png" target="_blank" rel="noopener">p. 74</a> · Verso la prova, nn. 5–7 e 11a.</p></div>
+<p class="screen-only"><a href="#rotta">Torna alla rotta</a> · <a href="#lezione-3">Lezione successiva</a></p>
+</section><section id="lezione-3" class="panel"><p class="tag">Settimana 2 · Lezione 3</p>
+<h2>Dove vive il grafico?</h2><p class="section-meta">Zeri, intersezioni e segno · Libro pp. 13–14</p>
+<p><strong>Deduci dove si trova la curva e distingui uno zero, un punto escluso e un contatto senza cambio di segno.</strong></p><p>5′ lancio · 15′ laboratorio · 10′ formalizzazione · 25′ esercizi · 5′ uscita</p>
+<div class="prompt"><h3>Prima di calcolare</h3><p>Se una curva tocca l’asse x, passa sempre dall’altra parte?</p></div>
+<div class="block"><h3>Laboratorio</h3><p>Prevedi il segno tra i punti critici. Usa il cursore e poi confronta grafico e tabella. Cambia modello per distinguere uno zero doppio da un punto fuori dominio.</p><div class="lab"><div class="lab-controls"><label for="sign-type">Funzione <select id="sign-type"><option value="poly">x²(x−2)/3</option><option value="rational">(x+2)/(x−1)</option></select></label><label for="sign-x">Ascissa x <input id="sign-x" type="range" min="-4" max="4" step="0.25" value="-1"></label></div><svg class="graph" id="graph-sign" viewBox="0 0 540 274" role="img" aria-label="Grafico con cursore per confrontare posizione e segno"></svg><output class="output" id="out-sign" aria-live="polite"></output></div>
+<label class="write">Scrivi una previsione e motiva con ciò che osservi.<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label></div>
+<div class="block theory"><h3>Formalizziamo</h3>
+<p class="section-meta">Sintesi dal manuale · <a href="immagini/pagina_13.png" target="_blank" rel="noopener">p. 13</a>, <a href="immagini/pagina_14.png" target="_blank" rel="noopener">p. 14</a></p>
+
+<h4>Zeri e intersezioni</h4>
+<p>Gli zeri sono i numeri \(x\in D\) per cui \(f(x)=0\). I punti corrispondenti sono \((x,0)\). L’intersezione con l’asse \(y\) è \((0,f(0))\), se \(0\in D\). In una funzione fratta, conta come zero ogni ingresso in cui il numeratore si annulla e il denominatore è diverso da zero.</p>
+<h4>Come si costruisce la tabella dei segni?</h4>
+<p>Nei polinomi e nelle frazioni razionali scomponi i fattori. Sulla retta distingui gli zeri dai valori esclusi. Tra due punti critici consecutivi, i fattori lineari non cambiano segno. Moltiplica o dividi i segni e controlla separatamente i punti critici. Un fattore \((x-a)^2\) è positivo su entrambi i lati di \(a\).</p>
+<h4>Come si passa al grafico?</h4>
+<p>Gli ingressi esclusi non hanno punti sul grafico. Per quelli ammessi, \(f(x)>0\) indica il semipiano sopra l’asse \(x\), \(f(x)<0\) quello sotto. Le disuguaglianze non strette \(\ge0\) e \(\le0\) comprendono anche gli zeri. Lo studio del segno consente di delimitare le regioni della curva.</p>
+<h4>Schema operativo</h4><ol><li>Trova il dominio.</li><li>Risolvi \(f(x)=0\) nel dominio. Per l’asse <i>y</i> calcola \(f(0)\) solo se 0 appartiene al dominio.</li><li>Segna zeri ed esclusioni sulla retta e studia il segno dei fattori.</li><li>Riporta sul piano punti e regioni compatibili. Tratteggia le regioni escluse.</li></ol><p class="dsa-note hint">Riga 1: i punti esclusi. Riga 2: gli zeri. Riga 3: il segno tra un punto e il successivo.</p>
+<h4>Esempio svolto</h4><p>Studia dominio, intersezioni e segno di \(f(x)=\frac{(x-1)^2}{x+2}\).</p><details class="hint"><summary>Mostra i passaggi</summary><ol><li>Escludi \(-2\). Il numeratore si annulla in 1, quindi trovi \((1,0)\). A \(x=0\) la funzione vale \(1/2\).</li><li>Per \(x\ne1\) il numeratore è positivo. Il segno è quindi quello di \(x+2\).</li><li>Il grafico sta sotto l’asse per \(x<-2\), sopra in \((-2,1)\cup(1,+\infty)\). In 1 tocca l’asse e rimane dalla stessa parte.</li></ol></details><details class="hint"><summary>Un altro esempio</summary><p>Per \(f(x)=x^2(x-2)\), il segno è negativo prima di 2 tranne in 0. Lo zero doppio in 0 non cambia il segno.</p></details></div>
+<div class="cols"><div class="block"><h3>In classe</h3><ul class="book-list"><li><a href="immagini/pagina_43.png" target="_blank" rel="noopener">p. 43, n. 267 (a–b)</a> · Leggi gli intervalli in cui la curva è sopra l’asse x e quelli in cui è sotto.<div class="book-crop" style="aspect-ratio:157/145;max-width:157px"><img alt="Prima curva del confronto sul segno" src="immagini/pagina_43.png" style="width:487.89809%;left:-84.07643%;top:-411.72414%"></div></li><li><a href="immagini/pagina_44.png" target="_blank" rel="noopener">p. 44, n. 278</a> · Trova dominio, intersezioni e segno di (2x−3)/(x+4).</li></ul></div>
+<div class="block"><h3>A casa · 40 minuti</h3><p>10′ teoria e tabella dei segni · 15′ esercizio base · 15′ sfida</p><ul class="book-list"><li><a href="immagini/pagina_44.png" target="_blank" rel="noopener">p. 44, n. 276</a> · Trova dominio, intersezioni e segno di x⁴−5x²+4.</li></ul>
+<details><summary>Esercizi di recupero, a scelta</summary><ul class="book-list"><li><a href="immagini/pagina_44.png" target="_blank" rel="noopener">p. 44, n. 280</a> · Trova dominio, intersezioni e segno di (x²−6x+9)/(x²+4).</li></ul></details></div></div>
+<div class="block"><h3>Sfida per casa</h3><p><a href="immagini/pagina_44.png" target="_blank" rel="noopener">p. 44, n. 283</a> · Per (x²−2x−3)/(x²−4), trova dominio, intersezioni e segno. Indica sul piano le zone in cui può passare il grafico.</p>
+<details class="hint"><summary>Un indizio per la sfida</summary><p>I fattori sono (x−3)(x+1) e (x−2)(x+2). Usa simboli diversi per zeri ed esclusioni.</p></details>
+<label class="write">Annota il passaggio da discutere in classe.<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label></div>
+<details class="hint"><summary>Un indizio per iniziare</summary><p>Nel n. 278 a p. 44 distingui lo zero del numeratore da quello del denominatore.</p><details><summary>Un passo in più</summary><p>Confronta i segni dei due fattori su ciascuno dei tre intervalli.</p></details></details>
+<div class="block"><h3>Prima di chiudere</h3><label class="write">Perché x=3 è uno zero di (x−3)² ma il segno non cambia?<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label><p><a href="immagini/pagina_74.png" target="_blank" rel="noopener">p. 74</a> · Verso la prova, n. 1d e n. 9.</p></div>
+<p class="screen-only"><a href="#rotta">Torna alla rotta</a> · <a href="#lezione-4">Lezione successiva</a></p>
+</section><section id="lezione-4" class="panel"><p class="tag">Settimana 2 · Lezione 4</p>
+<h2>Che cosa racconta la curva?</h2><p class="section-meta">Immagine, monotonia, parità e periodicità · Libro pp. 14–18</p>
+<p><strong>Leggere proprietà dal grafico e giustificare pari o dispari dal dominio e dalla formula.</strong></p><p>5′ lancio · 13′ laboratorio · 12′ formalizzazione · 25′ esercizi · 5′ uscita</p>
+<div class="prompt"><h3>Prima di calcolare</h3><p>Un tratto di grafico può stare sotto l’asse x e nello stesso tempo essere crescente?</p></div>
+<div class="block"><h3>Laboratorio</h3><p>Sposta il cursore. Confronta i punti di ascisse x e −x. Passa dal grafico con un tratto costante al seno e cerca la minima traslazione orizzontale positiva che ripete tutto il grafico.</p><div class="lab"><div class="lab-controls"><label for="property-type">Grafico <select id="property-type"><option value="square">Parabola</option><option value="cube">Cubica</option><option value="flat">Tratto costante</option><option value="sine">Seno</option></select></label><label for="property-x">Ascissa x <input id="property-x" type="range" min="-4" max="4" step="0.25" value="1"></label><label for="property-t">Traslazione del seno <select id="property-t"><option value="1">π/2</option><option value="2">π</option><option value="3">3π/2</option><option value="4">2π</option></select></label></div><svg class="graph" id="graph-properties" viewBox="0 0 540 274" role="img" aria-label="Grafico con punti di ascissa opposta e confronto del seno traslato"></svg><p>Nel seno, la curva tratteggiata rappresenta \(y=\sin(x+T)\).</p><output class="output" id="out-properties" aria-live="polite"></output></div>
+<label class="write">Scrivi una previsione e motiva con ciò che osservi.<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label></div>
+<div class="block theory"><h3>Formalizziamo</h3>
+<p class="section-meta">Sintesi dal manuale · <a href="immagini/pagina_14.png" target="_blank" rel="noopener">p. 14</a>, <a href="immagini/pagina_15.png" target="_blank" rel="noopener">p. 15</a>, <a href="immagini/pagina_16.png" target="_blank" rel="noopener">p. 16</a>, <a href="immagini/pagina_17.png" target="_blank" rel="noopener">p. 17</a>, <a href="immagini/pagina_18.png" target="_blank" rel="noopener">p. 18</a></p>
+
+<h4>Immagine, limitatezza ed estremi</h4>
+<p>\(\operatorname{Im}f=\{f(x):x\in D\}\). Una funzione è limitata superiormente se esiste una quota che nessun valore supera, inferiormente se esiste una quota sotto cui nessun valore scende. L’<b>estremo superiore</b> è la più piccola delle quote superiori e l’<b>estremo inferiore</b> la più grande delle quote inferiori. Diventano massimo e minimo quando sono valori assunti. In \(e^x\), l’immagine è \((0,+\infty)\): l’inf è 0, mentre il minimo non esiste. In \(x^2\), il minimo è 0 e un punto di minimo è \(x=0\).</p>
+<h4>Monotonia su un intervallo</h4>
+<p>Per ogni coppia \(x_1&lt;x_2\) dell’intervallo, una funzione strettamente crescente soddisfa \(f(x_1)&lt;f(x_2)\). Una strettamente decrescente soddisfa \(f(x_1)&gt;f(x_2)\). In senso lato si usano rispettivamente \(\le\) e \(\ge\). Nella funzione costante tutte le ordinate sono uguali. La parabola \(x^2\) è strettamente decrescente su \((-\infty,0]\) e strettamente crescente su \([0,+\infty)\).</p>
+<h4>Simmetrie e periodicità</h4>
+<p>Su un dominio simmetrico rispetto a 0, \(f(-x)=f(x)\) per tutti gli \(x\) significa <b>pari</b> (simmetria rispetto all’asse \(y\)). \(f(-x)=-f(x)\) significa <b>dispari</b> (simmetria centrale nell’origine). Basta una coppia che violi l’identità per scartarla. Una funzione è periodica se una traslazione di ampiezza \(T>0\) conserva il dominio e \(f(x+T)=f(x)\) per tutti gli ingressi. Il periodo minimo, se esiste, è il più piccolo \(T>0\) con questa proprietà. Il seno ha periodo minimo \(2\pi\); \(\sin(2x)\) ha periodo minimo \(\pi\).</p>
+<h4>Schema operativo</h4><div class="map"><div><b>Immagine</b> proiezione sull’asse <i>y</i>. Se un estremo è raggiunto, è massimo o minimo.</div><div><b>Monotonia</b> confronta due ordinate mentre le ascisse aumentano. Un tratto costante ammette la crescita in senso lato.</div><div><b>Pari o dispari</b> prima controlla che gli opposti appartengano al dominio. Poi confronta \(f(-x)\) con \(f(x)\) o \(-f(x)\).</div><div><b>Periodica</b> uno spostamento orizzontale \(T>0\) conserva dominio e valori. Per il seno il periodo minimo è \(2\pi\).</div></div><p class="dsa-note hint">Asse x per il dominio, asse y per l’immagine. Leggi f(−x) come «il valore della funzione all’ascissa opposta».</p>
+<h4>Esempio svolto</h4><p>Descrivi \(f(x)=|x|-1\) su \([-2,2]\). Che cosa cambia su \((-2,2)\)?</p><details class="hint"><summary>Mostra i passaggi</summary><ol><li>Il vertice è \((0,-1)\) e i due estremi hanno ordinata 1. L’immagine è \([-1,1]\).</li><li>La funzione è pari e ha zeri in \(-1\) e 1. Scende fino a 0 e poi sale. Il minimo è \(-1\) e il massimo è 1.</li><li>Aprendo gli estremi restano simmetria, zeri e minimo. L’immagine diventa \([-1,1)\). L’estremo superiore resta 1 e il massimo non è più raggiunto.</li></ol></details><details class="hint"><summary>Un altro esempio</summary><p>La funzione \(f(x)=x\) cresce su tutto ℝ, anche dove è negativa. In \(x^2\) le ascisse opposte hanno la stessa immagine, in \(x^3\) hanno immagini opposte.</p></details></div>
+<div class="cols"><div class="block"><h3>In classe</h3><ul class="book-list"><li><a href="immagini/pagina_48.png" target="_blank" rel="noopener">p. 48, n. 325 (primo e secondo grafico)</a> · Leggi l’immagine delle prime due funzioni. Considera la parabola prolungata oltre il riquadro.<div class="book-crop" style="aspect-ratio:375/156;max-width:375px"><img alt="Parabola e semicerchio per leggere l’immagine" src="immagini/pagina_48.png" style="width:204.26667%;left:-25.06667%;top:-76.28205%"></div></li><li><a href="immagini/pagina_50.png" target="_blank" rel="noopener">p. 50, n. 343 (a, b, c, f, g)</a> · Dichiara vero o falso. a) Cresce strettamente in [−7,−5]. b) È costante in [−4,−2]. c) Cresce strettamente in [−1,1]. f) Cresce in senso lato in [−5,1]. g) Decresce strettamente in [−7,−2].<div class="book-crop" style="aspect-ratio:183/154;max-width:183px"><img alt="Spezzata con tratti decrescente, costante, crescente e decrescente" src="immagini/pagina_50.png" style="width:418.57923%;left:-287.43169%;top:-60.38961%"></div></li><li><a href="immagini/pagina_51.png" target="_blank" rel="noopener">p. 51, n. 349 (tutti e tre i grafici)</a> · Da sinistra a destra riconosci se le curve sono pari, dispari o prive di entrambe le simmetrie.<div class="book-crop" style="aspect-ratio:603/168;max-width:603px"><img alt="Tre curve da confrontare per la simmetria" src="immagini/pagina_51.png" style="width:127.03151%;left:-13.59867%;top:-70.83333%"></div></li></ul></div>
+<div class="block"><h3>A casa · 40 minuti</h3><p>12′ teoria e mappa · 15′ esercizi base · 13′ sfida</p><ul class="book-list"><li><a href="immagini/pagina_51.png" target="_blank" rel="noopener">p. 51, nn. 352, 354, 360</a> · Classifica per parità le funzioni x³−x⁵, x⁸−x⁶+1 e √x+∛x.</li><li><a href="immagini/pagina_52.png" target="_blank" rel="noopener">p. 52, n. 380</a> · Individua il periodo minimo di cos(3x).</li></ul>
+<details><summary>Esercizi di recupero, a scelta</summary><ul class="book-list"><li><a href="immagini/pagina_49.png" target="_blank" rel="noopener">p. 49, n. 329 (a–d)</a> · Dal grafico ricava sup e inf e stabilisci se sono rispettivamente massimo e minimo.<div class="book-crop" style="aspect-ratio:172/175;max-width:172px"><img alt="Curva con massimo in (3,4) e linea orizzontale a quota −5" src="immagini/pagina_49.png" style="width:445.34884%;left:-166.86047%;top:-107.42857%"></div></li></ul></details></div></div>
+<div class="block"><h3>Sfida per casa</h3><p><a href="immagini/pagina_50.png" target="_blank" rel="noopener">p. 50, n. 345</a> · Inventa un grafico su [−6,6] con immagine [−4,4], due zeri, strettamente decrescente fino a 0 e strettamente crescente dopo 0. Motiva tutte le scelte.</p>
+<details class="hint"><summary>Un indizio per la sfida</summary><p>Disegna prima un vertice in (0,−4) e due estremi all’altezza 4. Cerca la forma di una funzione già nota.</p></details>
+<label class="write">Annota il passaggio da discutere in classe.<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label></div>
+<details class="hint"><summary>Un indizio per iniziare</summary><p>Nel n. 360 a p. 51 puoi calcolare f(1)? E f(−1)?</p><details><summary>Un passo in più</summary><p>La radice quadrata decide quali ascisse entrano nel dominio. Confronta il dominio con il suo riflesso.</p></details></details>
+<div class="block"><h3>Prima di chiudere</h3><label class="write">Se il dominio è [0,+∞), posso dichiarare una funzione pari a partire dalla sola formula?<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label><p><a href="immagini/pagina_74.png" target="_blank" rel="noopener">p. 74</a> · Verso la prova, n. 1c,e–f e n. 8.</p></div>
+<p class="screen-only"><a href="#rotta">Torna alla rotta</a> · <a href="#lezione-5">Lezione successiva</a></p>
+</section><section id="lezione-5" class="panel"><p class="tag">Settimana 3 · Lezione 5</p>
+<h2>Tornare indietro, mettere in catena</h2><p class="section-meta">Iniettività, inversa e funzione composta · Libro pp. 19–21</p>
+<p><strong>Controllare il numero di controimmagini, invertire nei casi essenziali e rispettare l’ordine di composizione.</strong></p><p>5′ lancio · 15′ due laboratori · 10′ formalizzazione · 25′ esercizi · 5′ uscita</p>
+<div class="prompt"><h3>Prima di calcolare</h3><p>Se conosci l’altezza di una palla, puoi sempre risalire all’istante in cui l’ha raggiunta?</p></div>
+<div class="block"><h3>Laboratorio</h3><p>Sposta la retta orizzontale sulla parabola. Restringi il dominio a x ≥ 0 e prova a prevedere il grafico dell’inversa. Poi inverti l’ordine delle due macchine e osserva che cosa succede con x=1.</p><div class="lab"><div class="lab-controls"><label><input id="inverse-restrict" type="checkbox"> Restringi a x ≥ 0 e mostra l’inversa</label><label for="inverse-y">Altezza y <input id="inverse-y" type="range" min="-2" max="6" step="0.25" value="4"></label></div><svg class="graph" id="graph-inverse" viewBox="0 0 540 274" role="img" aria-label="Parabola con retta orizzontale mobile e inversa della parabola ristretta"></svg><p>Quando restringi la parabola, appaiono l’inversa \(y=\sqrt{x}\) e la bisettrice \(y=x\).</p><output class="output" id="out-inverse" aria-live="polite"></output></div><div class="lab"><div class="lab-controls"><label for="compose-order">Ordine <select id="compose-order"><option value="gf">Prima f, poi g</option><option value="fg">Prima g, poi f</option></select></label><label for="compose-x">Ingresso x <input id="compose-x" type="range" min="-3" max="5" step="0.25" value="1"></label></div><div class="chain"><span>f: radice quadrata</span><span>g: sottrai 2</span></div><output class="output" id="out-compose" aria-live="polite"></output></div>
+<label class="write">Scrivi una previsione e motiva con ciò che osservi.<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label></div>
+<div class="block theory"><h3>Formalizziamo</h3>
+<p class="section-meta">Sintesi dal manuale · <a href="immagini/pagina_19.png" target="_blank" rel="noopener">p. 19</a>, <a href="immagini/pagina_20.png" target="_blank" rel="noopener">p. 20</a>, <a href="immagini/pagina_21.png" target="_blank" rel="noopener">p. 21</a></p>
+
+<h4>Controimmagini e ruolo del codominio</h4>
+<p>Le controimmagini di \(y\) sono le soluzioni di \(f(x)=y\) nel dominio. Una funzione è <b>iniettiva</b> se ogni \(y\) ha al più una controimmagine, <b>suriettiva</b> se ogni \(y\) del codominio ne ha almeno una e <b>biiettiva</b> se ciascuno ne ha esattamente una. Per esempio \(x^2\), da \(\mathbb R\) in \(\mathbb R\), non è suriettiva; da \(\mathbb R\) in \([0,+\infty)\) lo è, ma \(1\) ha ancora due controimmagini.</p>
+<h4>Inversa e restrizione</h4>
+<p>Nel libro si guarda la corrispondenza fra dominio e immagine. La funzione inversa associa ogni uscita alla sua unica controimmagine. Nel grafico, una retta orizzontale che incontra la curva più volte rivela l’assenza di unicità. Una funzione strettamente monotona su un intervallo è iniettiva. Per trovare l’inversa scambia \(x\) e \(y\) e isola \(y\) se possibile. Per \(x^2\) ristretto a \(x\ge0\), scegli il ramo \(y=\sqrt{x}\); dominio e immagine dell’inversa sono entrambi \([0,+\infty)\).</p>
+<h4>Composta e doppio filtro</h4>
+<p>\((g\circ f)(x)=g(f(x))\) si legge «g applicata al risultato di f». Il dominio è \(\{x\in D_f:f(x)\in D_g\}\). Cambiando l’ordine possono cambiare sia la formula sia il dominio. Se \(f(x)=x^2\) e \(g(x)=x+1\), allora \(g\circ f=x^2+1\), mentre \(f\circ g=(x+1)^2\).</p>
+<h4>Schema operativo</h4><p><b>Iniettiva</b> significa al più una controimmagine per ogni valore. <b>Suriettiva</b> significa che ogni elemento del codominio è raggiunto. <b>Biiettiva</b> significa esattamente una controimmagine per ogni elemento del codominio. Per invertire sul suo insieme immagine basta l’iniettività. Il grafico inverso si ottiene scambiando le coordinate, cioè riflettendo rispetto a \(y=x\).</p>
+<div class="chain"><span>ingresso <i>x</i></span><span aria-hidden="true">→</span><span>prima <i>f(x)</i></span><span aria-hidden="true">→</span><span>poi <i>g(f(x))</i></span></div>
+<p>Per \(g\circ f\) servono due controlli. L’ingresso è nel dominio di <i>f</i> e il valore \(f(x)\) è nel dominio di <i>g</i>.</p><p class="dsa-note hint">Disegna due frecce e scrivi l’ordine. g(f(x)) si legge «g applicata al risultato di f».</p>
+<h4>Esempio svolto</h4><p>Inverti \(f(x)=2^x+3\) e controlla il dominio dell’inversa.</p><details class="hint"><summary>Mostra i passaggi</summary><ol><li>L’esponenziale con base 2 è strettamente crescente. L’immagine di \(f\) è \((3,+\infty)\).</li><li>Da \(x=2^y+3\) ricavi \(2^y=x-3\) e quindi \(f^{-1}(x)=\log_2(x-3)\), con \(x>3\).</li><li>Controlla un punto. \(f(2)=7\), quindi l’inversa deve dare 2 in 7. Infatti \(\log_2(7-3)=2\).</li></ol></details><details class="hint"><summary>Un altro esempio</summary><p>Con \(f(x)=\sqrt{x}\) e \(g(x)=x-2\), \(g(f(x))=\sqrt{x}-2\) richiede \(x\ge0\), mentre \(f(g(x))=\sqrt{x-2}\) richiede \(x\ge2\).</p></details></div>
+<div class="cols"><div class="block"><h3>In classe</h3><ul class="book-list"><li><a href="immagini/pagina_52.png" target="_blank" rel="noopener">p. 52, n. 407 (primo e terzo grafico)</a> · Controlla se la prima e la terza funzione sono invertibili sulla propria immagine.<div class="book-crop" style="aspect-ratio:635/182;max-width:630px"><img alt="Tre grafici per il test della retta orizzontale" src="immagini/pagina_52.png" style="width:120.62992%;left:-9.76378%;top:-346.15385%"></div></li><li><a href="immagini/pagina_53.png" target="_blank" rel="noopener">p. 53, n. 409</a> · Stabilisci se f(x)=1−3x è invertibile e scrivi la sua inversa.</li><li><a href="immagini/pagina_54.png" target="_blank" rel="noopener">p. 54, n. 432</a> · Con f(x)=x−1 e g(x)=x²+4 trova f∘g e g∘f, con i domini.</li></ul></div>
+<div class="block"><h3>A casa · 40 minuti</h3><p>12′ teoria · 15′ esercizio base · 13′ sfida</p><ul class="book-list"><li><a href="immagini/pagina_53.png" target="_blank" rel="noopener">p. 53, n. 419</a> · Determina l’inversa di f(x)=eˣ−1 e il suo dominio.</li></ul>
+<details><summary>Esercizi di recupero, a scelta</summary><ul class="book-list"><li><a href="immagini/pagina_54.png" target="_blank" rel="noopener">p. 54, n. 436</a> · Con f(x)=log₂ x e g(x)=2ˣ⁺¹ trova f∘g e g∘f, con i domini.</li></ul></details></div></div>
+<div class="block"><h3>Sfida per casa</h3><p><a href="immagini/pagina_55.png" target="_blank" rel="noopener">p. 55, n. 443</a> · Con f(x)=√(x−1) e g(x)=log₂ x, calcola entrambe le composte e motiva perché i loro domini sono diversi.</p>
+<details class="hint"><summary>Un indizio per la sfida</summary><p>In f∘g l’uscita del logaritmo deve essere almeno 1. In g∘f l’uscita della radice deve essere strettamente positiva.</p></details>
+<label class="write">Annota il passaggio da discutere in classe.<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label></div>
+<details class="hint"><summary>Un indizio per iniziare</summary><p>Nel n. 436 a p. 54 cerchia la funzione interna in ciascun ordine.</p><details><summary>Un passo in più</summary><p>Se il logaritmo viene applicato per primo, l’ingresso iniziale deve essere positivo.</p></details></details>
+<div class="block"><h3>Prima di chiudere</h3><label class="write">Perché (√x)² coincide con x solo sugli ingressi ammessi?<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label><p><a href="immagini/pagina_74.png" target="_blank" rel="noopener">p. 74</a> · Verso la prova, n. 1g, n. 10 e n. 11b.</p></div>
+<p class="screen-only"><a href="#rotta">Torna alla rotta</a> · <a href="#lezione-6">Lezione successiva</a></p>
+</section><section id="lezione-6" class="panel"><p class="tag">Settimana 3 · Lezione 6</p>
+<h2>Il problema di Gauss e la prova</h2><p class="section-meta">Somma a coppie, allenamento e autoverifica · Libro p. 22 (idea di indice), pp. 27–28 (somma e racconto)</p>
+<p><strong>Riconoscere una somma a passo costante e affrontare in autonomia la prova sulle funzioni.</strong></p><p>4′ racconto · 10′ laboratorio Gauss · 7′ esercizio · 9′ ripasso, avvio sfida e consegne · 30′ prova</p>
+<div class="prompt"><h3>Prima di calcolare</h3><p>Si racconta che il maestro di Gauss, Büttner, abbia dato alla classe una lunga somma. Nella versione più nota, si trattava di sommare i numeri da 1 a 100. Come la risolveresti senza sommare uno alla volta?</p></div>
+<div class="block"><h3>Laboratorio</h3><p>Metti in colonna una lista di addendi e la stessa lista al contrario. Confronta 5 e 6 termini. Che cosa rimane costante? Perché dividi per due anche con un numero dispari di termini?</p><div class="lab"><div class="lab-controls"><label for="gauss-n">Numero di addendi <input id="gauss-n" type="range" min="2" max="100" step="1" value="6"></label><label for="gauss-first">Primo addendo <input id="gauss-first" type="range" min="1" max="30" step="1" value="1"></label><label for="gauss-step">Passo <input id="gauss-step" type="range" min="1" max="6" step="1" value="1"></label></div><div class="figure"><table aria-label="La somma scritta in due ordini"><tbody id="gauss-table"></tbody></table></div><output class="output" id="out-gauss" aria-live="polite"></output></div>
+<label class="write">Scrivi una previsione e motiva con ciò che osservi.<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label></div>
+<div class="block theory"><h3>Formalizziamo</h3>
+<p class="section-meta">Sintesi dal manuale · <a href="immagini/pagina_22.png" target="_blank" rel="noopener">p. 22</a>, <a href="immagini/pagina_25.png" target="_blank" rel="noopener">p. 25</a>, <a href="immagini/pagina_26.png" target="_blank" rel="noopener">p. 26</a>, <a href="immagini/pagina_27.png" target="_blank" rel="noopener">p. 27</a>, <a href="immagini/pagina_28.png" target="_blank" rel="noopener">p. 28</a></p>
+
+<h4>Dall’indice alla somma</h4>
+<p>Una successione è una funzione con indici naturali. Qui partiamo da \(n=1\) e guardiamo solo liste a differenza costante. Se il primo termine è \(a_1\) e il passo è \(d\), l’ultimo di \(n\) termini è \(a_n=a_1+(n-1)d\). Fra primo e ultimo ci sono \(n-1\) passi: se conosci gli estremi e il passo positivo, \(n=(a_n-a_1)/d+1\).</p>
+<h4>Perché si dimezza anche se i termini sono dispari?</h4>
+<p>Scrivi una copia della lista in avanti e una all’indietro. Ogni colonna dà \(a_1+a_n\), anche quella centrale. Le due righe insieme valgono \(2S_n\), perciò si divide sempre per 2. Per \(2,5,8,11,14\), le cinque colonne fanno 16 ciascuna e \(S_5=40\).</p>
+<h4>Prima dell’autoverifica sulle funzioni</h4>
+<p>Tieni a mente quattro controlli: scrivi il dominio prima delle semplificazioni, leggi le proiezioni sugli assi, separa segno e monotonia, applica prima la funzione interna. Per l’inversa verifica l’unicità e scambia dominio e immagine.</p>
+<h4>Schema operativo</h4><p>Una successione assegna un valore a ogni indice naturale ammesso. Qui basta il caso a passo costante. In due copie della somma, una in ordine inverso, ogni colonna vale primo più ultimo. Si ottiene \(S_n=n(a_1+a_n)/2\), ossia numero di termini per media del primo e dell’ultimo.</p>
+<p>Il racconto biografico del 1856 parla di una somma in progressione aritmetica. La sequenza 1–100 appartiene alla versione più nota. <a href="https://books.google.com/books/about/Gauss_zum_Ged%C3%A4chtniss.html?id=-1D-0QEACAAJ">Sartorius von Waltershausen, <i>Gauss zum Gedächtniss</i></a></p>
+<details class="hint"><summary>Due quesiti in stile test d’ingresso</summary><p>Quanto vale la somma dei primi 21 dispari positivi? Quanto vale la somma dei multipli di 3 compresi tra 12 e 60, estremi inclusi?</p><details class="answer"><summary>Controlla</summary><p>21 × (1+41)/2 = 441. I multipli sono (60−12)/3+1 = 17, perciò la somma è 17 × (12+60)/2 = 612.</p></details></details><p class="dsa-note hint">Scrivi la lista in due righe. Leggi la somma come «numero di addendi per la media degli estremi».</p>
+<h4>Esempio svolto</h4><p>Calcola la somma dei multipli di 5 da 15 a 65 inclusi.</p><details class="hint"><summary>Mostra i passaggi</summary><ol><li>Il primo è 15 e l’ultimo 65. Ci sono \((65-15)/5=10\) salti, dunque 11 addendi.</li><li>Nelle due liste le colonne valgono tutte 80, compresa quella centrale \(40+40\).</li><li>Le due liste insieme valgono \(11\cdot80=880\). Una sola vale 440.</li></ol></details><details class="hint"><summary>Un altro esempio</summary><p>Da 1 a 100 ogni colonna ha somma 101. Le colonne sono 100, ma abbiamo contato la somma due volte. \(S=100\cdot101/2=5050\).</p></details></div>
+<div class="cols"><div class="block"><h3>In classe</h3><ul class="book-list"><li><a href="immagini/pagina_64.png" target="_blank" rel="noopener">p. 64, n. 582</a> · Un teatro ha 30 file, 28 posti nella prima e 2 posti in più in ciascuna fila successiva. Quanti posti ci sono in tutto?</li><li><a href="immagini/pagina_66.png" target="_blank" rel="noopener">p. 66, nn. 596, 603</a> · 596. Quale fra ∛(4−x²), e^(4−x²), √(4−x²), ln(4−x²) ha dominio [−2,2]? 603. Per f(x)=x²+1, calcola (f∘f)(0).</li><li><a href="immagini/pagina_74.png" target="_blank" rel="noopener">p. 74, nn. 1–11 (prima parte)</a> · Avvia la prova in ordine. Segna il punto a cui arrivi dopo 30 minuti.</li></ul></div>
+<div class="block"><h3>A casa · 40 minuti</h3><p>3′ lettura del metodo di Gauss · 7′ sfida già avviata in classe · 30′ completamento della prova</p><ul class="book-list"><li><a href="immagini/pagina_74.png" target="_blank" rel="noopener">p. 74, nn. 1–11 (completamento)</a> · Riprendi dal punto raggiunto. Controlla le risposte dopo aver concluso.</li></ul>
+<details><summary>Esercizi di recupero, a scelta</summary><ul class="book-list"><li><a href="immagini/pagina_64.png" target="_blank" rel="noopener">p. 64, n. 580</a> · A novembre una persona accantona 10 centesimi il primo giorno, 20 il secondo e così via. Quanto mette da parte nei 30 giorni?</li></ul></details></div></div>
+<div class="block"><h3>Sfida per casa</h3><p><a href="immagini/pagina_64.png" target="_blank" rel="noopener">p. 64, n. 583</a> · Nel mosaico triangolare della figura, organizza il conteggio per file. Trova il totale delle tessere di ciascun colore senza contarle una per una.</p><div class="book-crop" style="aspect-ratio:310/292;max-width:310px"><img alt="Mosaico triangolare con tessere azzurre e gialle" src="immagini/pagina_64.png" style="width:247.09677%;left:-128.06452%;top:-92.80822%"></div>
+<details class="hint"><summary>Un indizio per la sfida</summary><p>Dall’alto, nella fila k ci sono k triangoli con la punta in alto e k−1 con la punta in basso. Somma le due liste.</p></details>
+<label class="write">Annota il passaggio da discutere in classe.<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label></div>
+<details class="hint"><summary>Un indizio per iniziare</summary><p>Nel n. 582 a p. 64 tra la prima e l’ultima fila conta gli incrementi.</p><details><summary>Un passo in più</summary><p>Affianca alla lista dei posti la stessa lista al contrario. Somma per colonne e poi dimezza.</p></details></details>
+<div class="block"><h3>Prima di chiudere</h3><label class="write">Quale passaggio della prova sai motivare meglio? Quale riprenderai dalla mappa?<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label><p><a href="immagini/pagina_74.png" target="_blank" rel="noopener">p. 74</a> · Verso la prova, nn. 1–11.</p></div>
+<p class="screen-only"><a href="#rotta">Torna alla rotta</a> · <a href="#prova">Vai all’autoverifica</a></p>
+</section><section id="mappe" class="panel"><h2>Mappe da tenere sul quaderno</h2>
+<div class="block"><h3>Studio essenziale da una formula</h3>
+<ol><li><b>Dominio</b> · Scrivi e interseca le condizioni. Denominatore diverso da zero, radice pari con argomento non negativo, logaritmo con argomento positivo.</li>
+<li><b>Assi</b> · Risolvi \(f(x)=0\) nel dominio. Calcola \(f(0)\) se esiste.</li>
+<li><b>Segno</b> · Ordina i punti critici e costruisci la tabella. Sopra l’asse \(x\) trovi i valori positivi.</li>
+<li><b>Simmetrie</b> · Verifica prima il dominio e poi confronta \(f(-x)\) con \(f(x)\) e con \(-f(x)\).</li></ol></div>
+<div class="block"><h3>Leggere un grafico</h3><div class="map"><div><b>Ascisse disponibili</b> Dominio</div><div><b>Ordinate raggiunte</b> Immagine</div><div><b>Valore più alto o più basso raggiunto</b> Massimo o minimo</div><div><b>Verso da sinistra a destra</b> Crescita, decrescita o tratto costante</div><div><b>Rette verticali</b> Controllano che sia il grafico di una funzione</div><div><b>Rette orizzontali</b> Controllano l’unicità delle controimmagini</div></div></div>
+<div class="block"><h3>Operare sulle funzioni</h3><div class="map"><div><b>Inversa</b> Controlla l’iniettività sul dominio. Scambia ingressi e uscite. Il dominio dell’inversa è l’immagine della funzione.</div><div><b>Composta</b> Applica prima la funzione interna. Controlla poi se il suo risultato può entrare nell’esterna.</div><div><b>Valore assoluto</b> In \(y=|f(x)|\) piega verso l’alto la parte sotto l’asse \(x\).</div><div><b>Periodo</b> Trasla orizzontalmente. Il periodo minimo, quando esiste, è il primo spostamento positivo che lascia invariato il grafico.</div></div></div></section><section id="prova" class="panel"><h2>Prova di autoverifica</h2>
+<div class="block"><p>Apri la <a href="immagini/pagina_74.png" target="_blank" rel="noopener">p. 74</a> del volume 5 e svolgi i numeri <b>1–11</b> sul quaderno.</p>
+<p>Il libro indica 60 minuti. Usa la prima mezz’ora in classe e la seconda a casa, ripartendo dal punto raggiunto. La griglia della pagina assegna 10 punti. Prima di controllare, scrivi il motivo di ogni esclusione e il procedimento degli esercizi 9–11.</p>
+<ol><li><b>N. 1.</b> Leggi gli assi, poi esamina i tratti e usa la retta orizzontale.</li>
+<li><b>Nn. 2–7.</b> Scrivi le condizioni prima di semplificare.</li>
+<li><b>Nn. 8–9.</b> Confronta gli opposti e traduci il segno in regioni del piano.</li>
+<li><b>Nn. 10–11.</b> Segui l’ordine delle funzioni e confronta i domini.</li></ol>
+<label class="write">Segna l’ultimo numero svolto e una domanda da riprendere.<textarea rows="2"></textarea><span class="write-line" aria-hidden="true"></span></label>
+<details class="answer"><summary>Controlla solo dopo aver terminato</summary><ol class="book-list"><li><strong>1a–g</strong> · f(−2)=−4 e f(4)=0. D=[−7,5], Im=[−5,6]. Zeri −4, 0, 4. L’intervallo massimo di crescita stretta è [−2,2] (il tratto interno è (−2,2)). Né pari né dispari: il dominio non è simmetrico. Non invertibile: 0 ha tre controimmagini.</li><li><strong>2</strong> · ℝ, funzione polinomiale.</li><li><strong>3</strong> · ℝ \ {−1/3,1}, zeri di (3x+1)(x−1).</li><li><strong>4</strong> · (−∞,−3) ∪ (2,+∞). (x+3)(x−2)&gt;0 al denominatore. La radice cubica non aggiunge restrizioni.</li><li><strong>5</strong> · ℝ \ {1/8}. Il secondo denominatore è sempre positivo. Il primo si annulla per 2^(x+1)=2^(9x).</li><li><strong>6</strong> · (−2,2), dove 4−x²&gt;0.</li><li><strong>7</strong> · (0,+∞) \ {8}. Il logaritmo richiede x&gt;0 e vale 3 in x=8.</li><li><strong>8a–c</strong> · Dispari, né pari né dispari, pari. Il punto x=0 con f(0)=1 esclude la disparità di b. Per la parità, f(1)=3 e f(−1)=−1/2.</li><li><strong>9</strong> · Figura B. x²(x−1)(x+1) è positivo per |x|&gt;1, negativo per 0&lt;|x|&lt;1, nullo in −1, 0, 1. In 0 il segno resta negativo sui due lati.</li><li><strong>10</strong> · (g∘f)(x)=(2x−1)²+3(2x−1)−1=4x²+2x−3. D=ℝ.</li><li><strong>11a–b</strong> · D_f=ℝ e D_g=ℝ \ {0}. Per x≠0 si fattorizza 4^x−1=(2^x−1)(2^x+1), quindi g ha il grafico di f con un punto vuoto in (0,2). f è crescente e f⁻¹(x)=log₂(x−1) su (1,+∞).</li></ol><p>Per ogni errore, scrivi quale controllo ti era sfuggito, poi rifai il passaggio senza guardare la soluzione.</p></details></div>
+<div class="block"><h3>Se serve riprendere un passaggio</h3><ul><li>Dominio: <a href="immagini/pagina_37.png" target="_blank" rel="noopener">p. 37, n. 81</a> e <a href="immagini/pagina_39.png" target="_blank" rel="noopener">p. 39, n. 136</a>.</li>
+<li>Segno: <a href="immagini/pagina_44.png" target="_blank" rel="noopener">p. 44, n. 278</a>.</li><li>Parità e immagine: <a href="immagini/pagina_51.png" target="_blank" rel="noopener">p. 51, n. 360</a> e <a href="immagini/pagina_48.png" target="_blank" rel="noopener">p. 48, n. 325 (secondo grafico)</a>.</li>
+<li>Inversa e composta: <a href="immagini/pagina_53.png" target="_blank" rel="noopener">p. 53, n. 419</a> e <a href="immagini/pagina_54.png" target="_blank" rel="noopener">p. 54, n. 432</a>.</li></ul></div></section></main>
+<footer class="foot">UDA 2 · <i>Colori della matematica</i>, edizione azzurra, volume 5 · Leonardo Sasso · Petrini</footer>
+<script>
+const byId = id => document.getElementById(id);
+function preference(id, className) {
+  const control = byId(id);
+  if (!control) return;
+  control.addEventListener('click', () => {
+    const active = document.body.classList.toggle(className);
+    control.setAttribute('aria-pressed', String(active));
+  });
+}
+preference('dark', 'dark');
+preference('dsa', 'dsa-mode');
+byId('print').addEventListener('click', () => window.print());
+let closedSolutions = [];
+window.addEventListener('beforeprint', () => {
+  closedSolutions = [...document.querySelectorAll('.teacher details.solution:not([open])')];
+  closedSolutions.forEach(item => { item.open = true; });
+});
+window.addEventListener('afterprint', () => closedSolutions.forEach(item => { item.open = false; }));
+const classSelect = byId('class-select');
+if (classSelect) {
+  const updateClass = () => {
+    byId('class-name').textContent = classSelect.value === '5CLL' ? '5CLL · Liceo linguistico' : '5DSU · Liceo delle scienze umane';
+  };
+  classSelect.addEventListener('change', updateClass);
+  updateClass();
+}
+const panels = [...document.querySelectorAll('.panel')];
+function navigate() {
+  if (!panels.length) return;
+  const id = location.hash.slice(1);
+  const current = panels.find(panel => panel.id === id) || panels[0];
+  panels.forEach(panel => { panel.hidden = panel !== current; });
+  document.querySelectorAll('.navlinks a').forEach(link => {
+    if (link.hash === '#' + current.id) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+    link.classList.toggle('active', link.hash === '#' + current.id);
+  });
+  if (id && id !== 'contenuto') {
+    document.querySelector('main').focus({ preventScroll: true });
+    window.scrollTo(0, 0);
+  }
+}
+window.addEventListener('hashchange', navigate);
+navigate();
+
+const format = n => new Intl.NumberFormat('it-IT', { maximumFractionDigits: 2 }).format(n);
+const geometry = {
+  left: 46, top: 18, width: 448, height: 236,
+  x: n => 46 + (n + 5) * 44.8,
+  y: n => 18 + (6 - n) * (236 / 12)
+};
+function graph(id, paths, options = {}) {
+  const equalScale = id === 'graph-inverse';
+  const { x, y, left, top, width, height } = equalScale ? {left:158,top:18,width:224,height:224,x:n=>270+n*28,y:n=>18+(6-n)*28} : geometry;
+  const xMin = equalScale ? -4 : -5, xMax = -xMin, yMin = equalScale ? -2 : -6, yMax = 6;
+  const right = left + width, bottom = top + height;
+  const xAxis = y(0), yAxis = x(0);
+  let grid = '';
+  for (let i = xMin; i <= xMax; i++) {
+    const pos = x(i);
+    grid += '<line class="grid" x1="'+pos+'" x2="'+pos+'" y1="'+top+'" y2="'+bottom+'"/>';
+    if (i % 2 === 0 && i !== 0) grid += '<text x="'+pos+'" y="'+(xAxis+15)+'" text-anchor="middle">'+i+'</text>';
+  }
+  for (let i = yMin; i <= yMax; i++) {
+    grid += '<line class="grid" x1="'+left+'" x2="'+right+'" y1="'+y(i)+'" y2="'+y(i)+'"/>';
+    if (i % 2 === 0 && i !== 0) grid += '<text x="'+(yAxis-13)+'" y="'+(y(i)+4)+'" text-anchor="end">'+i+'</text>';
+  }
+  const poly = (fn, interval, kind) => {
+    let d = '', drawing = false;
+    for (let i=0; i<=300; i++) {
+      const t = interval[0] + (interval[1]-interval[0])*i/300, v = fn(t);
+      if (!Number.isFinite(v)) { drawing=false; continue; }
+      d += (drawing?'L':'M') + x(t).toFixed(2) + ',' + y(v).toFixed(2);
+      drawing = true;
+    }
+    return '<path class="curve '+kind+'" d="'+d+'"/>';
+  };
+  const line = options.vertical !== undefined
+    ? '<line class="marker" x1="'+x(options.vertical)+'" x2="'+x(options.vertical)+'" y1="'+top+'" y2="'+bottom+'"/>'
+    : options.horizontal !== undefined
+      ? '<line class="marker" x1="'+left+'" x2="'+right+'" y1="'+y(options.horizontal)+'" y2="'+y(options.horizontal)+'"/>' : '';
+  const dots = (options.points || []).map(([px,py,kind='dot']) =>
+    '<circle class="'+kind+'" cx="'+x(px)+'" cy="'+y(py)+'" r="4.5"/>').join('');
+  byId(id).innerHTML = '<defs><clipPath id="clip-'+id+'"><rect x="'+left+'" y="'+top+'" width="'+width+'" height="'+height+'"/></clipPath></defs>'
+    + grid + '<path class="axis" d="M'+left+' '+xAxis+'H'+right+'M'+yAxis+' '+top+'V'+bottom+'"/><text x="'+(right+8)+'" y="'+(xAxis+5)+'">x</text><text x="'+(yAxis+8)+'" y="16">y</text>'
+    + '<g clip-path="url(#clip-'+id+')">'+paths.map(([fn,interval,kind=''])=>poly(fn,interval,kind)).join('')+line+dots+'</g>';
+}
+function wire(ids, render) {
+  ids.forEach(id => byId(id).addEventListener('input', render));
+  render();
+}
+const value = id => Number(byId(id).value);
+const selected = id => byId(id).value;
+const output = (id, text) => { byId(id).textContent = text; };
+if (byId('graph-domain')) {
+  wire(['domain-type','domain-x'], () => {
+    const t = value('domain-x'), model = selected('domain-type');
+    const semicircle = n => Math.sqrt(9-n*n);
+    const segment = n => n-1;
+    const piece = n => n+4;
+    const single = model === 'circle';
+    const v = single ? (Math.abs(t)<=3 ? semicircle(t) : NaN) : t>=-4&&t<-2 ? piece(t) : t>=1&&t<=4 ? segment(t) : NaN;
+    const paths = single ? [[semicircle,[-3,3]]] : [[piece,[-4,-2]],[segment,[1,4]]];
+    const ends = single ? [[-3,0,'end'],[3,0,'end']] : [[-4,0,'end'],[-2,2,'open'],[1,0,'end'],[4,3,'end']];
+    graph('graph-domain', paths, {vertical:t, points:Number.isFinite(v)?[...ends,[t,v]]:ends});
+    output('out-domain','x = '+format(t)+(Number.isFinite(v)?' → y = '+format(v):' → nessuna ordinata nel grafico'));
+  });
+  wire(['hole-type','hole-x'], () => {
+    const t=value('hole-x'), model=selected('hole-type'), line=n=>n+1;
+    const log=n=>Math.log(n-1), radical=n=>Math.sqrt(n-1);
+    if (model==='abs') {
+      const f=n=>n*n-4, folded=n=>Math.abs(f(n));
+      graph('graph-holes',[[f,[-5,5],'second'],[folded,[-5,5]]],{vertical:t,points:[[t,f(t)],[t,folded(t)]]});
+      output('out-holes','x = '+format(t)+' → f(x) = '+format(f(t))+' · |f(x)| = '+format(folded(t)));
+      return;
+    }
+    if (model==='hole') {
+      graph('graph-holes',[[line,[-5,1]],[line,[1,5]]],{vertical:t,points:t===1?[[1,2,'open']]:[[t,line(t)],[1,2,'open']]});
+      output('out-holes',t===1?'f(1) non è definita. La retta y=x+1 ha invece il punto (1,2).':'x = '+format(t)+' → f(x) = '+format(line(t)));
+    } else {
+      const f=model==='log'?log:radical, v=f(t);
+      graph('graph-holes',[[f,[model==='log'?1.001:1,5]]],{vertical:t,points:Number.isFinite(v)?[[t,v]]:[]});
+      output('out-holes','x = '+format(t)+(Number.isFinite(v)?' → f(x) = '+format(v):' → argomento non ammesso'));
+    }
+  });
+  wire(['sign-type','sign-x'], () => {
+    const t=value('sign-x'), rational=selected('sign-type')==='rational';
+    const f=rational?(n=>n===1?NaN:(n+2)/(n-1)):(n=>n*n*(n-2)/3);
+    const paths=rational?[[f,[-5,0.999]],[f,[1.001,5]]]:[[f,[-5,5]]];
+    const v=f(t);
+    graph('graph-sign', paths, {vertical:t,points:Number.isFinite(v)?[[t,v]]:[]});
+    output('out-sign','x = '+format(t)+' → '+(!Number.isFinite(v)?'fuori dominio':v===0?'zero':v>0?'sopra l’asse x, segno positivo':'sotto l’asse x, segno negativo'));
+  });
+  wire(['property-type','property-x','property-t'], () => {
+    const model=selected('property-type'), t=value('property-x'), period=value('property-t');
+    const f={square:n=>n*n/3,cube:n=>n*n*n/12,flat:n=>Math.max(0,Math.abs(n)-1)*Math.sign(n),sine:Math.sin}[model];
+    const points=[[t,f(t)],[-t,f(-t)]];
+    const paths=[[f,[-5,5]]];
+    if(model==='sine') paths.push([n=>f(n+period*Math.PI/2),[-5,5],'second']);
+    graph('graph-properties',paths,{points});
+    const shift=model==='sine'?' · confronto con f(x + '+period+'π/2) = '+format(f(t+period*Math.PI/2)):'';
+    output('out-properties','f(x) = '+format(f(t))+' · f(−x) = '+format(f(-t))+shift);
+  });
+  wire(['inverse-restrict','inverse-y'], () => {
+    const h=value('inverse-y'), restricted=byId('inverse-restrict').checked;
+    const paths=[[n=>n*n,[restricted?0:-5,5]]];
+    if(restricted) paths.push([Math.sqrt,[0,5],'second'],[n=>n,[-5,5],'second']);
+    const roots=h<0?[]:h===0?[0]:restricted?[Math.sqrt(h)]:[-Math.sqrt(h),Math.sqrt(h)];
+    graph('graph-inverse',paths,{horizontal:h,points:roots.map(x=>[x,h])});
+    output('out-inverse','y = '+format(h)+' → '+(roots.length?roots.map(format).join(' e ')+' come controimmagine'+(roots.length>1?' (due valori)':''):'nessuna controimmagine'));
+  });
+  wire(['compose-order','compose-x'], () => {
+    const x=value('compose-x'), rootFirst=selected('compose-order')==='gf';
+    const first=rootFirst?Math.sqrt(x):x-2;
+    const second=rootFirst?first-2:Math.sqrt(first);
+    const names=rootFirst?['f','g']:['g','f'];
+    output('out-compose','x = '+format(x)+' → '+names[0]+': '+(Number.isFinite(first)?format(first):'ingresso non ammesso')
+      +(Number.isFinite(first)?' → '+names[1]+': '+(Number.isFinite(second)?format(second):'ingresso non ammesso'):''));
+  });
+  wire(['gauss-n','gauss-first','gauss-step'], () => {
+    const n=value('gauss-n'), a=value('gauss-first'), d=value('gauss-step');
+    const last=a+(n-1)*d, columns=n<=8?Array.from({length:n},(_,i)=>i):[0,1,2,null,n-3,n-2,n-1];
+    const row=(title,fn)=>'<tr><th scope="row">'+title+'</th>'+columns.map(i=>'<td>'+(i===null?'…':fn(i))+'</td>').join('')+'</tr>';
+    byId('gauss-table').innerHTML=row('In avanti',i=>a+i*d)+row('All’indietro',i=>last-i*d)+row('Somma',()=>a+last);
+    output('out-gauss',n+' colonne da '+(a+last)+' → somma cercata: '+format(n*(a+last)/2));
+  });
+}
+</script></body></html>
